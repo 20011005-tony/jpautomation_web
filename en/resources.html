@@ -196,17 +196,17 @@
 <h2 class="text-3xl font-bold font-headline tracking-tighter">Knowledge Assets</h2>
 <p class="text-on-surface-variant font-label text-sm uppercase tracking-widest">Filter by Architecture Type</p>
 </div>
-<div class="flex gap-2 flex-wrap">
-<button class="px-6 py-2 bg-primary text-on-primary-fixed rounded-full text-xs font-bold font-label uppercase tracking-widest">All</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Guides</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">eBooks</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Audit Templates</button>
+<div class="flex gap-2 flex-wrap" id="resource-filters">
+<button data-filter="all" class="filter-btn active px-6 py-2 bg-primary text-on-primary-fixed rounded-full text-xs font-bold font-label uppercase tracking-widest">All</button>
+<button data-filter="guias" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Guides</button>
+<button data-filter="libros" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Ebooks</button>
+<button data-filter="plantillas" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Templates</button>
 </div>
 </section>
 <!-- Resource Bento Grid -->
 <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Card 1 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="high-tech digital circuit board with neon purple glowing pathways in a dark futuristic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASEhHTtPkm-EQ4bbeTY1zjMTOmpHHtsLpRF05fvvTkZ5yGtJHO-fwEIHxOAbQt3wEKMvmFZtpkqTwiCEmK6sWT6qzhh6SwmZH0BCAnfd7dWcP-9FNelUwuuWpnsgrvXsiJOOfCNIUD-4GIJfsFYzJ2-9UaGCxUnFbxzJNCpKUMIWYSjkFjM51SAu40WdEs7uhCa0PwSK1V0W5CQydR3Kggx5U4UqrAlW14wkQGaoqQFW-Rv7RcH0Cvc_KydU0x1jSdeTM7UWLxRVY"/>
 <div class="absolute top-4 left-4">
@@ -214,8 +214,68 @@
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Scaling AI Models in Encrypted Verticals</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Understanding the latency trade-offs in multi-layered obsidian encryption for LLMs.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Automation Diagnostic Guide for SMBs</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">A step-by-step framework to identify the 7 processes with the highest automation ROI in your B2B operation.</p>
+<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">15 Min Read</span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
+                            Download PDF 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col md:col-span-2 lg:col-span-1">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="abstract view of planet earth with glowing fiber optic network lines symbolizing global connectivity and data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKYGdKZohr9Yq4N71zzWbXEhQpicLysN8TkbPRE6F3C9tYBzxptrM4E1fyM74iE6FMGTLDk5-_1eBSfHcwWOyojRwg01NhJahwSvlIYz0AuxNox3GLw3vw6pIT6l7rUAqk8XB9gL9glsFdaDSvqwvRtOFLa8eRL4ztz4DwObZpjLV4GyOn8gVu5uVjxpqVNhyivLJwZTFtMea0pi_-MXQpqsvXof4DfFtGP-4rPesM_5qwRiLN6xiBXmA1YWC8w_6-_6wYmI2BcTo"/>
+<div class="absolute top-4 left-4">
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-secondary uppercase tracking-widest">Report</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex-grow flex flex-col">
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">AI Benchmark for B2B SMBs in 2026</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Adoption, investment, and results data from over 100 AI implementations in SMBs across the US and LATAM.</p>
+<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">38 Pages</span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
+                            Request Access 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">lock</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div data-category="plantillas" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="rows of server racks in a modern data center with violet and blue indicator lights reflecting on metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63mLr_VyUnMsh0TkNAzZuPASWR6-CtcWvl1OvfAtYCZXC5svu0_l9IT4PH5E5lhNus3qzuGLukGu5ETrYzyqN09506qv_VKAehqM_aRTcrSgl3Tn_JXVkxPOB-MkB2nTivm7Kx_Oucl4Ba6nBV_fiWdP8ujCFzjvU3iZJQOfTveX4rkZhT-jRXbn9p9MVpPCighkwRmre-J-HxqSYY9krHs9BxUwlNWIN5If3i52qillvxdGHW2nsmV14uhCf7WMokYlzrsI9dQE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-error uppercase tracking-widest">Template</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex-grow flex flex-col">
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Automatable Process Audit Checklist</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">A ready-to-use checklist to evaluate which processes in your operation are candidates for automation.</p>
+<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">XLSX Template</span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
+                            Download Template 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">table_chart</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="monochrome code terminal screen with sharp text and subtle purple glowing highlights on key functions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrC_hnR_bi0zkKaNk2_LX_alFN99uvx9YKiGJEmafthlAP_ZRqtMYNS-1NDOCf_Gv34Be4Xxt3CIRfA8-4f8zQwcEnRQF212kysGj4E1c3n9jN02-7bxAd5PUqKfNkj1jhUZxkLA8502fD8jJSO-HizhUnk147Se5Nl9_0RYwPJy_Tf1rDj6geXhO_mgRNT87xXGXOLqxBwnSpJlZ2OwR3s1Ozg3i1YGDAwZaNcU1t6f9pJporQBX6NFpsanoxxtlDkrxbpTYyIAY"/>
+<div class="absolute top-4 left-4">
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-tertiary uppercase tracking-widest">Practical Guide</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex-grow flex flex-col">
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">How to Protect Your Company Data When Using AI</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Security and privacy criteria to evaluate AI tools before integrating them into your workflows.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
 <span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">12 Min Read</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
@@ -225,92 +285,45 @@
 </div>
 </div>
 </div>
-<!-- Card 2 (Bigger Span) -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col md:col-span-2 lg:col-span-1">
-<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
-<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="abstract view of planet earth with glowing fiber optic network lines symbolizing global connectivity and data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKYGdKZohr9Yq4N71zzWbXEhQpicLysN8TkbPRE6F3C9tYBzxptrM4E1fyM74iE6FMGTLDk5-_1eBSfHcwWOyojRwg01NhJahwSvlIYz0AuxNox3GLw3vw6pIT6l7rUAqk8XB9gL9glsFdaDSvqwvRtOFLa8eRL4ztz4DwObZpjLV4GyOn8gVu5uVjxpqVNhyivLJwZTFtMea0pi_-MXQpqsvXof4DfFtGP-4rPesM_5qwRiLN6xiBXmA1YWC8w_6-_6wYmI2BcTo"/>
-<div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-secondary uppercase tracking-widest">Market Analysis</span>
-</div>
-</div>
-<div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">2024 AI Audit State of the Union</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Exclusive findings from auditing 500+ Fortune 1000 AI deployments this fiscal year.</p>
-<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">38 Page Report</span>
-<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
-                            Request Access 
-                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">lock</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
-<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
-<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="rows of server racks in a modern data center with violet and blue indicator lights reflecting on metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63mLr_VyUnMsh0TkNAzZuPASWR6-CtcWvl1OvfAtYCZXC5svu0_l9IT4PH5E5lhNus3qzuGLukGu5ETrYzyqN09506qv_VKAehqM_aRTcrSgl3Tn_JXVkxPOB-MkB2nTivm7Kx_Oucl4Ba6nBV_fiWdP8ujCFzjvU3iZJQOfTveX4rkZhT-jRXbn9p9MVpPCighkwRmre-J-HxqSYY9krHs9BxUwlNWIN5If3i52qillvxdGHW2nsmV14uhCf7WMokYlzrsI9dQE"/>
-<div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-error uppercase tracking-widest">Security Template</span>
-</div>
-</div>
-<div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">The Zero-Trust Audit Framework</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">A ready-to-use checklist for verifying autonomous agent permissions across clouds.</p>
-<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">XLSX Template</span>
-<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
-                            Get Template 
-                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">table_chart</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
-<div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
-<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="monochrome code terminal screen with sharp text and subtle purple glowing highlights on key functions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrC_hnR_bi0zkKaNk2_LX_alFN99uvx9YKiGJEmafthlAP_ZRqtMYNS-1NDOCf_Gv34Be4Xxt3CIRfA8-4f8zQwcEnRQF212kysGj4E1c3n9jN02-7bxAd5PUqKfNkj1jhUZxkLA8502fD8jJSO-HizhUnk147Se5Nl9_0RYwPJy_Tf1rDj6geXhO_mgRNT87xXGXOLqxBwnSpJlZ2OwR3s1Ozg3i1YGDAwZaNcU1t6f9pJporQBX6NFpsanoxxtlDkrxbpTYyIAY"/>
-<div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-tertiary uppercase tracking-widest">On-Demand Webinar</span>
-</div>
-</div>
-<div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Securing the Prompt Injection Surface</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Interactive session on defending your proprietary data against adversarial prompts.</p>
-<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">55 Min Video</span>
-<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
-                            Watch Now 
-                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">play_circle</span>
-</a>
-</div>
-</div>
-</div>
 <!-- Card 5 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="libros" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="minimalist abstract 3D shape floating in obsidian space with soft gradient lighting in purple and magenta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAML8bhflIItEvOJ4-yXCy-vvFZvWMVktMWYEFMKl1l4aEjrfP1nMRCgjnfmvwYL5WIoT4Q6VJKHFV7hblmo0xwPtm3nBeqdX8CnuJFQ-NH7aq08RFQbNi95beBbpWcItZhxun8Q_NvSGLgGqE5MOkJKbPROqCtbhlIq11j2P50nnpZh7lMqRdeo9SBb3E9B4-J_X5mCM0hfhMeGKFl3XqFG2BlhDOjx_qpAS0O3ZMuuaGwt06CS1MtwbbEfL1bR0HRuKJsR27XDUE"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-primary uppercase tracking-widest">Free eBook</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-primary uppercase tracking-widest">eBook</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">The Digital Architect's Handbook</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Building resilient SaaS structures that survive the obsolescence cycle of rapid AI innovation.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Automation Handbook for B2B Teams</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">How to build automated workflows that survive team growth and tool changes.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
 <span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">112 Pages</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
-                            Claim eBook 
+                            Get the eBook 
                             <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">book</span>
 </a>
 </div>
 </div>
 </div>
 <!-- Card 6 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="plantillas" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="macro photograph of a futuristic processor with complex geometric patterns and subtle glowing blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKX5gYpoXNtP-3U2ycJAKNWk-LFZ186fOYyO2mhoBqYtwSH0vqePULtTTFVuaj6rpBAUFoHDw3-3F5kSRRP1dx6yqsFiHGSpj8-ER0NAbI-Qk6g6CAHDb9tm32QC3Jj5mwEnFcg7T55rm3mahGu-rFPcnp-YGVhQSMIB94QV7NpSIlsKTaBDOFgic5xc9bibIBVIRqYbsTnc30PdoQdJv2smJI4hEjNN2jwsEdUG4gOioDZTNXYuObPr2ijjRchp1tvftuiCD3jA"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-white uppercase tracking-widest">Case Study</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-white uppercase tracking-widest">Tool</span>
+</div>
+</div>
+<div class="p-8 space-y-4 flex-grow flex flex-col">
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">ROI Template for Automation Projects</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">A ready-made spreadsheet to calculate the return on investment of an automation project in under 30 minutes.</p>
+<div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">XLSX Template</span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contact.html">
+                            Download Template 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">table_chart</span>
+</a>
+</div>
+</div>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
@@ -370,5 +383,35 @@
 </div>
 </footer>
 <script src="../assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const resourceCards = document.querySelectorAll('.resource-card');
+
+    filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Update active state on buttons
+            filterButtons.forEach(function(b) {
+                b.classList.remove('active');
+                b.classList.remove('bg-primary', 'text-on-primary-fixed');
+                b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+            });
+            btn.classList.add('active');
+            btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+            btn.classList.add('bg-primary', 'text-on-primary-fixed');
+
+            // Filter cards
+            var filter = btn.getAttribute('data-filter');
+            resourceCards.forEach(function(card) {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>

@@ -168,81 +168,68 @@
 <!-- Search & Filter Controls -->
 <section class="max-w-7xl mx-auto px-6 mb-16">
 <div class="flex flex-col md:flex-row items-center justify-between gap-8 border-b border-outline-variant/10 pb-8">
-<div class="flex gap-8 overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
-<button class="font-label text-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-2">Todo</button>
-<button class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2">Seguridad</button>
-<button class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2">Arquitectura</button>
-<button class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2">Automatización</button>
+<div class="flex gap-8 overflow-x-auto pb-4 md:pb-0 scrollbar-hide" id="filter-buttons">
+<button class="filter-btn active font-label text-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-2" data-filter="all">Todo</button>
+<button class="filter-btn font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2" data-filter="seguridad">Seguridad</button>
+<button class="filter-btn font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2" data-filter="arquitectura">Arquitectura</button>
+<button class="filter-btn font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-white transition-colors pb-2" data-filter="automatizacion">Automatización</button>
 </div>
 <div class="relative w-full md:w-80">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
-<input class="w-full bg-surface-container-high border-none text-white font-label text-sm px-12 py-3 rounded-lg focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="Buscar automatización" type="text"/>
+<input id="blog-search" class="w-full bg-surface-container-high border-none text-white font-label text-sm px-12 py-3 rounded-lg focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="Buscar artículos" type="text"/>
 </div>
 </div>
 </section>
 <!-- Article Bento Grid -->
 <section class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-<!-- Large Post -->
-<article class="md:col-span-8 group cursor-pointer" onclick="window.location.href='blog/ia-ventas-operaciones-pymes.html'">
-<div class="bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:bg-surface-container h-full flex flex-col">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6" id="articles-grid">
+<!-- Large Post: Alinear ventas y operaciones -->
+<a href="blog/ia-ventas-operaciones-pymes.html" data-category="automatizacion" class="md:col-span-8 group block article-card">
+<article class="bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:bg-surface-container h-full flex flex-col">
 <div class="aspect-video w-full overflow-hidden">
-<img alt="Article 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBihv42xbEsR3RPYQZ1sYEMiytKdu-__izg6r4uQxPVVQqK-mcXeQ7z40exhbfLldSMqewo5meB4uWvrIiDVY8r-b6UuvoIfih0i-psC36vDo62RAnupslEr4u2pKN5qoYu5VI3C5ImonSqdiP6V8XeBw4m6eDDyUjnnK_WaGTEMQ2ovoeGV-9R-1U9ZnzJiL7JeMg6ktnTFMz8XEj1lWyvDVlQlXlYRTZtHR6WDxKj0KYbtiKRT54a-Ef9xncgHF29UKvLby3gDLE"/>
+<img alt="Cómo alinear ventas y operaciones con IA en pymes B2B" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBihv42xbEsR3RPYQZ1sYEMiytKdu-__izg6r4uQxPVVQqK-mcXeQ7z40exhbfLldSMqewo5meB4uWvrIiDVY8r-b6UuvoIfih0i-psC36vDo62RAnupslEr4u2pKN5qoYu5VI3C5ImonSqdiP6V8XeBw4m6eDDyUjnnK_WaGTEMQ2ovoeGV-9R-1U9ZnzJiL7JeMg6ktnTFMz8XEj1lWyvDVlQlXlYRTZtHR6WDxKj0KYbtiKRT54a-Ef9xncgHF29UKvLby3gDLE"/>
 </div>
 <div class="p-8 flex-1">
 <div class="flex items-center gap-4 mb-4">
-<span class="px-3 py-1 bg-secondary-container/30 text-secondary-dim text-[10px] font-label uppercase tracking-widest rounded-full">Auditoría de Seguridad</span>
-<span class="text-outline text-xs font-label">12 de Marzo, 2024</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-secondary-dim text-[10px] font-label uppercase tracking-widest rounded-full">Automatización</span>
+<span class="text-outline text-xs font-label">8 min lectura</span>
 </div>
-<h3 class="text-3xl font-bold tracking-tight text-white mb-4 group-hover:text-primary transition-colors">Cifrado Neural: La Frontera Final de la Soberanía de Datos</h3>
-<p class="text-on-surface-variant line-clamp-3 leading-relaxed">A medida que los LLMs se vuelven ubicuos, el riesgo de filtración de datos crece exponencialmente. Exploramos los últimos avances en cifrado polimórfico y cómo JP Automation está protegiendo activos globales.</p>
-</div>
+<h3 class="text-3xl font-bold tracking-tight text-white mb-4 group-hover:text-primary transition-colors">Cómo alinear ventas y operaciones con IA en pymes B2B</h3>
+<p class="text-on-surface-variant line-clamp-3 leading-relaxed">Explorá estrategias prácticas para integrar inteligencia artificial y automatizar la conexión entre tus equipos de ventas y operaciones.</p>
 </div>
 </article>
-<!-- Sidebar Post 1 -->
-<article class="md:col-span-4 group cursor-pointer" onclick="window.location.href='blog/costo-no-usar-ia-pymes.html'">
-<div class="bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:bg-surface-container h-full">
+</a>
+<!-- Sidebar Post: Costo silencioso -->
+<a href="blog/costo-no-usar-ia-pymes.html" data-category="arquitectura" class="md:col-span-4 group block article-card">
+<article class="bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 hover:bg-surface-container h-full">
 <div class="aspect-square w-full overflow-hidden">
-<img alt="Article 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjFeba3PZcW5BePDAzNITj6ojOE0we-5L87zELzF01eeVsi8FqF4cp4-yZ6_pZdXSMBL3YotMhbNRkyfl7vslJRaEqzO3wzFOkFAC5CEKHOZJwtNhJVE1Eaz4HqCWE48IiNBV6puDkucoWgfqDW0KY-98XD0SiaVV4ch-nZfP0orZqRzPNY5tBVxBdvx94-YQ3RXdItfpCReIYy21K_ECsx9oUkos-ME2wBZlp38uB7l8Pkx2FvgOIvDr-ZAJFB7zejrw3kJD3z1U"/>
+<img alt="El costo silencioso de no usar IA en pymes B2B" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjFeba3PZcW5BePDAzNITj6ojOE0we-5L87zELzF01eeVsi8FqF4cp4-yZ6_pZdXSMBL3YotMhbNRkyfl7vslJRaEqzO3wzFOkFAC5CEKHOZJwtNhJVE1Eaz4HqCWE48IiNBV6puDkucoWgfqDW0KY-98XD0SiaVV4ch-nZfP0orZqRzPNY5tBVxBdvx94-YQ3RXdItfpCReIYy21K_ECsx9oUkos-ME2wBZlp38uB7l8Pkx2FvgOIvDr-ZAJFB7zejrw3kJD3z1U"/>
 </div>
 <div class="p-6">
 <span class="text-outline text-xs font-label uppercase mb-3 block">Arquitectura • 4 min</span>
-<h3 class="text-xl font-bold text-white mb-2">El Mito de la Latencia en IA Distribuida</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2">Cómo los nodos de computación perimetral están destruyendo los cuellos de botella tradicionales del entrenamiento localizado.</p>
-</div>
+<h3 class="text-xl font-bold text-white mb-2">El costo silencioso de no usar IA en pymes B2B</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Descubrí cuánto pierde tu pyme por día sin automatizar procesos clave con IA.</p>
 </div>
 </article>
-<!-- Small Grid Items -->
-<a href="blog/procesos-automatizables-pymes.html" class="md:col-span-4 group cursor-pointer block">
+</a>
+<!-- Card Post: 7 procesos automatizables -->
+<a href="blog/procesos-automatizables-pymes.html" data-category="automatizacion" class="md:col-span-4 group block article-card">
 <article>
 <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/5 hover:border-primary/20 transition-all h-full">
 <div class="flex items-center gap-2 mb-6">
 <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<span class="font-label text-xs uppercase tracking-widest text-outline">Documentación Técnica</span>
+<span class="font-label text-xs uppercase tracking-widest text-outline">Automatización</span>
 </div>
-<h3 class="text-xl font-bold text-white mb-4">Guía: Procesos Automatizables en Pymes B2B</h3>
-<p class="text-on-surface-variant text-sm mb-6">Una guía profunda sobre los nuevos protocolos WebSocket para auditoría en tiempo real.</p>
+<h3 class="text-xl font-bold text-white mb-4">7 procesos automatizables con retorno rápido en pymes B2B</h3>
+<p class="text-on-surface-variant text-sm mb-6">Una guía práctica de los procesos que más rápido generan retorno al automatizarlos.</p>
 <span class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
                             Leer Más <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </span>
 </div>
 </article>
 </a>
-<a href="blog/ia-ventas-operaciones-pymes.html" class="md:col-span-4 group cursor-pointer block">
-<article>
-<div class="bg-surface-container-low rounded-xl overflow-hidden h-full">
-<div class="aspect-[16/9] overflow-hidden">
-<img alt="Article 3" class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FAzbz43k1bnK3Ih-H2q3-A2phSok6Z6uCV7Q2vkIwNiAOri83QaTDlCwut6qOs_GKslSdg8Jdm8KZt2wQqrZjiKR64pt2aJ8hImvDs-tUHJC87KXpFNfcL9kQQKmLP6LzaIsJSkYcAzf4DMFWr6dUJksKPLodtKnmZjJHKX8UzHVdX3X7_jnIbVljzkGLqT0kTUuwuDJh6U1UF36qx1jzEl0IkA_EXH_JhnRnlDadg9JPtyx44vjEUIRh3qtCIWrmpZ_T-5gCaI"/>
-</div>
-<div class="p-6">
-<span class="text-outline text-xs font-label uppercase mb-3 block">Caso de Éxito • 12 min</span>
-<h3 class="text-xl font-bold text-white mb-2">Escalando a 100M Agentes: Un Análisis Postmortem</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2">Las lecciones arquitectónicas aprendidas durante el despliegue de IA más grande de la historia.</p>
-</div>
-</div>
-</article>
-</a>
-<article class="md:col-span-4 group cursor-pointer">
+<!-- Newsletter -->
+<article class="md:col-span-8 group">
 <div class="bg-gradient-to-br from-primary/10 to-transparent p-8 rounded-xl border border-primary/20 hover:from-primary/20 transition-all flex flex-col justify-between h-full">
 <div>
 <span class="material-symbols-outlined text-primary mb-4">rocket_launch</span>
@@ -305,5 +292,41 @@
 </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+(function() {
+    var filterButtons = document.querySelectorAll('.filter-btn');
+    var articles = document.querySelectorAll('.article-card');
+    var searchInput = document.getElementById('blog-search');
+    var activeFilter = 'all';
+
+    function filterArticles() {
+        var searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        articles.forEach(function(article) {
+            var category = article.getAttribute('data-category');
+            var text = article.textContent.toLowerCase();
+            var matchesFilter = activeFilter === 'all' || category === activeFilter;
+            var matchesSearch = !searchTerm || text.indexOf(searchTerm) !== -1;
+            article.style.display = (matchesFilter && matchesSearch) ? '' : 'none';
+        });
+    }
+
+    filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(function(b) {
+                b.classList.remove('active', 'text-primary', 'border-b-2', 'border-primary');
+                b.classList.add('text-on-surface-variant');
+            });
+            this.classList.add('active', 'text-primary', 'border-b-2', 'border-primary');
+            this.classList.remove('text-on-surface-variant');
+            activeFilter = this.getAttribute('data-filter');
+            filterArticles();
+        });
+    });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+    }
+})();
+</script>
 </body>
 </html>

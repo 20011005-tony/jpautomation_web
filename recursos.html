@@ -196,17 +196,17 @@
 <h2 class="text-3xl font-bold font-headline tracking-tighter">Recursos Disponibles</h2>
 <p class="text-on-surface-variant font-label text-sm uppercase tracking-widest">Filtrar por Tipo</p>
 </div>
-<div class="flex gap-2 flex-wrap">
-<button class="px-6 py-2 bg-primary text-on-primary-fixed rounded-full text-xs font-bold font-label uppercase tracking-widest">Todo</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Guías</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Libros Digitales</button>
-<button class="px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Plantillas</button>
+<div class="flex gap-2 flex-wrap" id="resource-filters">
+<button data-filter="all" class="filter-btn active px-6 py-2 bg-primary text-on-primary-fixed rounded-full text-xs font-bold font-label uppercase tracking-widest">Todo</button>
+<button data-filter="guias" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Guías</button>
+<button data-filter="libros" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Libros Digitales</button>
+<button data-filter="plantillas" class="filter-btn px-6 py-2 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-full text-xs font-bold font-label uppercase tracking-widest transition-colors">Plantillas</button>
 </div>
 </section>
 <!-- Resource Bento Grid -->
 <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Card 1 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="high-tech digital circuit board with neon purple glowing pathways in a dark futuristic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASEhHTtPkm-EQ4bbeTY1zjMTOmpHHtsLpRF05fvvTkZ5yGtJHO-fwEIHxOAbQt3wEKMvmFZtpkqTwiCEmK6sWT6qzhh6SwmZH0BCAnfd7dWcP-9FNelUwuuWpnsgrvXsiJOOfCNIUD-4GIJfsFYzJ2-9UaGCxUnFbxzJNCpKUMIWYSjkFjM51SAu40WdEs7uhCa0PwSK1V0W5CQydR3Kggx5U4UqrAlW14wkQGaoqQFW-Rv7RcH0Cvc_KydU0x1jSdeTM7UWLxRVY"/>
 <div class="absolute top-4 left-4">
@@ -214,10 +214,10 @@
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Escalando Modelos IA en Verticales Cifrados</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Entendiendo los compromisos de latencia en cifrado multicapa para LLMs.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Guía de Diagnóstico de Automatización para Pymes</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Un framework paso a paso para identificar los 7 procesos con mayor ROI de automatización en tu operación B2B.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">12 Min de Lectura</span>
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">15 Min de Lectura</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
                             Descargar PDF 
                             <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">download</span>
@@ -225,17 +225,17 @@
 </div>
 </div>
 </div>
-<!-- Card 2 (Bigger Span) -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col md:col-span-2 lg:col-span-1">
+<!-- Card 2 -->
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col md:col-span-2 lg:col-span-1">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="abstract view of planet earth with glowing fiber optic network lines symbolizing global connectivity and data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKYGdKZohr9Yq4N71zzWbXEhQpicLysN8TkbPRE6F3C9tYBzxptrM4E1fyM74iE6FMGTLDk5-_1eBSfHcwWOyojRwg01NhJahwSvlIYz0AuxNox3GLw3vw6pIT6l7rUAqk8XB9gL9glsFdaDSvqwvRtOFLa8eRL4ztz4DwObZpjLV4GyOn8gVu5uVjxpqVNhyivLJwZTFtMea0pi_-MXQpqsvXof4DfFtGP-4rPesM_5qwRiLN6xiBXmA1YWC8w_6-_6wYmI2BcTo"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-secondary uppercase tracking-widest">Análisis de Mercado</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-secondary uppercase tracking-widest">Informe</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Estado de la IA 2024</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Resultados exclusivos de auditar más de 500 despliegues de IA este año.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Benchmark de IA para Pymes B2B en 2026</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Datos de adopción, inversión y resultados de más de 100 implementaciones de IA en pymes de USA y LATAM.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
 <span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">38 Páginas</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
@@ -246,16 +246,16 @@
 </div>
 </div>
 <!-- Card 3 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="plantillas" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="rows of server racks in a modern data center with violet and blue indicator lights reflecting on metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63mLr_VyUnMsh0TkNAzZuPASWR6-CtcWvl1OvfAtYCZXC5svu0_l9IT4PH5E5lhNus3qzuGLukGu5ETrYzyqN09506qv_VKAehqM_aRTcrSgl3Tn_JXVkxPOB-MkB2nTivm7Kx_Oucl4Ba6nBV_fiWdP8ujCFzjvU3iZJQOfTveX4rkZhT-jRXbn9p9MVpPCighkwRmre-J-HxqSYY9krHs9BxUwlNWIN5If3i52qillvxdGHW2nsmV14uhCf7WMokYlzrsI9dQE"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-error uppercase tracking-widest">Plantilla de Seguridad</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-error uppercase tracking-widest">Plantilla</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Marco de Auditoría de Confianza Cero</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Una lista de verificación lista para usar para verificar permisos de agentes autónomos en la nube.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Checklist de Auditoría de Procesos Automatizables</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Una lista de verificación lista para usar para evaluar qué procesos de tu operación son candidatos a automatización.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
 <span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">Plantilla XLSX</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
@@ -266,36 +266,36 @@
 </div>
 </div>
 <!-- Card 4 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="guias" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="monochrome code terminal screen with sharp text and subtle purple glowing highlights on key functions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrC_hnR_bi0zkKaNk2_LX_alFN99uvx9YKiGJEmafthlAP_ZRqtMYNS-1NDOCf_Gv34Be4Xxt3CIRfA8-4f8zQwcEnRQF212kysGj4E1c3n9jN02-7bxAd5PUqKfNkj1jhUZxkLA8502fD8jJSO-HizhUnk147Se5Nl9_0RYwPJy_Tf1rDj6geXhO_mgRNT87xXGXOLqxBwnSpJlZ2OwR3s1Ozg3i1YGDAwZaNcU1t6f9pJporQBX6NFpsanoxxtlDkrxbpTYyIAY"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-tertiary uppercase tracking-widest">Seminario a Demanda</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-tertiary uppercase tracking-widest">Guía Práctica</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Protegiendo la Superficie de Inyección de Prompts</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Sesión interactiva sobre cómo defender tus datos propietarios contra prompts adversarios.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Cómo Proteger los Datos de Tu Empresa al Usar IA</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Criterios de seguridad y privacidad para evaluar herramientas de IA antes de integrarlas en tus procesos.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">55 Min de Video</span>
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">12 Min de Lectura</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
-                            Ver Ahora 
-                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">play_circle</span>
+                            Descargar PDF 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">download</span>
 </a>
 </div>
 </div>
 </div>
 <!-- Card 5 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="libros" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="minimalist abstract 3D shape floating in obsidian space with soft gradient lighting in purple and magenta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAML8bhflIItEvOJ4-yXCy-vvFZvWMVktMWYEFMKl1l4aEjrfP1nMRCgjnfmvwYL5WIoT4Q6VJKHFV7hblmo0xwPtm3nBeqdX8CnuJFQ-NH7aq08RFQbNi95beBbpWcItZhxun8Q_NvSGLgGqE5MOkJKbPROqCtbhlIq11j2P50nnpZh7lMqRdeo9SBb3E9B4-J_X5mCM0hfhMeGKFl3XqFG2BlhDOjx_qpAS0O3ZMuuaGwt06CS1MtwbbEfL1bR0HRuKJsR27XDUE"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-primary uppercase tracking-widest">Libro Digital Gratis</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-primary uppercase tracking-widest">Libro Digital</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Manual del Arquitecto Digital</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Construyendo estructuras SaaS resilientes que sobreviven al ciclo de obsolescencia de la innovación rápida de IA.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Manual de Automatización para Equipos B2B</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Cómo construir flujos de trabajo automatizados que sobrevivan al crecimiento del equipo y los cambios de herramientas.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
 <span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">112 Páginas</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
@@ -306,21 +306,21 @@
 </div>
 </div>
 <!-- Card 6 -->
-<div class="group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
+<div data-category="plantillas" class="resource-card group bg-surface-container-low rounded-xl overflow-hidden glowing-border transition-all flex flex-col">
 <div class="aspect-[16/10] overflow-hidden bg-surface-container-highest relative">
 <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="macro photograph of a futuristic processor with complex geometric patterns and subtle glowing blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKX5gYpoXNtP-3U2ycJAKNWk-LFZ186fOYyO2mhoBqYtwSH0vqePULtTTFVuaj6rpBAUFoHDw3-3F5kSRRP1dx6yqsFiHGSpj8-ER0NAbI-Qk6g6CAHDb9tm32QC3Jj5mwEnFcg7T55rm3mahGu-rFPcnp-YGVhQSMIB94QV7NpSIlsKTaBDOFgic5xc9bibIBVIRqYbsTnc30PdoQdJv2smJI4hEjNN2jwsEdUG4gOioDZTNXYuObPr2ijjRchp1tvftuiCD3jA"/>
 <div class="absolute top-4 left-4">
-<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-white uppercase tracking-widest">Caso de Éxito</span>
+<span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold font-label text-white uppercase tracking-widest">Herramienta</span>
 </div>
 </div>
 <div class="p-8 space-y-4 flex-grow flex flex-col">
-<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Cómo OmniCorp Redujo el Tiempo de Auditoría un 92%</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Transición desde compliance manual al motor de oversight autónomo de JP Automation.</p>
+<h3 class="text-xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors leading-snug">Template de ROI para Proyectos de Automatización</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Planilla lista para calcular el retorno de inversión de un proyecto de automatización en menos de 30 minutos.</p>
 <div class="pt-6 mt-auto flex items-center justify-between border-t border-white/5">
-<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">Caso de Éxito</span>
+<span class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">Plantilla XLSX</span>
 <a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="contacto.html">
-                            Leer Caso 
-                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">article</span>
+                            Descargar Plantilla 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">table_chart</span>
 </a>
 </div>
 </div>
@@ -370,5 +370,35 @@
 </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const resourceCards = document.querySelectorAll('.resource-card');
+
+    filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Update active state on buttons
+            filterButtons.forEach(function(b) {
+                b.classList.remove('active');
+                b.classList.remove('bg-primary', 'text-on-primary-fixed');
+                b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+            });
+            btn.classList.add('active');
+            btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+            btn.classList.add('bg-primary', 'text-on-primary-fixed');
+
+            // Filter cards
+            var filter = btn.getAttribute('data-filter');
+            resourceCards.forEach(function(card) {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>
