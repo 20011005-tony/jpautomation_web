@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0E6760"/>
+  <circle cx="110" cy="84" r="180" fill="#117E75"/>
+  <circle cx="1080" cy="562" r="220" fill="#0A4F4A"/>
+  <rect x="120" y="120" width="960" height="390" rx="28" fill="#F5FBFC" fill-opacity="0.08" stroke="#9AD2CE"/>
+  <text x="180" y="260" fill="#F8FFFF" font-size="76" font-family="Georgia, serif" font-weight="700">JP Automation</text>
+  <text x="180" y="330" fill="#D7EEEC" font-size="38" font-family="Arial, sans-serif">Automatizacion, IA aplicada y crecimiento para pymes LATAM</text>
+  <rect x="180" y="380" width="370" height="62" rx="31" fill="#C76D2D"/>
+  <text x="220" y="421" fill="#FFF9F2" font-size="30" font-family="Arial, sans-serif">Diagnostico IA</text>
+</svg>

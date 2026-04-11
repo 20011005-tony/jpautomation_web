@@ -1,0 +1,17 @@
+{
+  "name": "JP Automation",
+  "short_name": "JP Automation",
+  "description": "Automation and AI systems for B2B SMB teams.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#0e0e0e",
+  "icons": [
+    {
+      "src": "/assets/img/logo-jp-automation.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP Automation | Homepage Redesign Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --color-bg: #0A0A0B;
+      --color-surface: #141416;
+      --color-surface-elevated: #1C1C1F;
+      --color-border: #2A2A2E;
+      --color-text: #FAFAFA;
+      --color-text-muted: #A1A1A6;
+      --color-accent: #22C55E;
+      --color-accent-dim: #16A34A;
+      --color-danger: #EF4444;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --container: 1200px;
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+      --spacing-2xl: 48px;
+      --spacing-3xl: 64px;
+      --spacing-4xl: 96px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-full: 9999px;
+      --transition: 0.2s ease;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 11, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xl);
+    }
+    
+    .nav-links a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    
+    .nav-links a:hover { color: var(--color-text); }
+    
+    .nav-cta {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+    
+    .nav-cta:hover { background: var(--color-accent-dim); }
+    
+    /* Hero Section */
+    .hero {
+      padding: calc(72px + var(--spacing-4xl)) 0 var(--spacing-4xl);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 197, 94, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(34, 197, 94, 0.08), transparent);
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: var(--spacing-3xl);
+      align-items: center;
+    }
+    
+    .hero-content .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-content p.lead {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      max-width: 520px;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-metrics {
+      display: flex;
+      gap: var(--spacing-2xl);
+      margin-top: var(--spacing-2xl);
+      padding-top: var(--spacing-xl);
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .metric { }
+    .metric strong {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+    .metric span {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    
+    /* Lead Form Card */
+    .lead-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-2xl);
+    }
+    
+    .lead-card-header {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .lead-card-header .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      background: rgba(34, 197, 94, 0.1);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .lead-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .form-group { margin-bottom: var(--spacing-md); }
+    
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--spacing-sm) var(--spacing-md);
+      background: var(--color-surface-elevated);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color var(--transition);
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-md) var(--spacing-xl);
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+    }
+    
+    .btn-primary {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      width: 100%;
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-accent-dim);
+      transform: translateY(-1px);
+    }
+    
+    /* Social Proof Strip */
+    .social-proof {
+      padding: var(--spacing-2xl) 0;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .social-proof p {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-3xl);
+      flex-wrap: wrap;
+      opacity: 0.6;
+    }
+    
+    .logos span {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+    
+    /* Services Preview */
+    .services-preview {
+      padding: var(--spacing-4xl) 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--spacing-3xl);
+    }
+    
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .section-header p {
+      color: var(--color-text-muted);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-lg);
+    }
+    
+    .service-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      transition: all var(--transition);
+    }
+    
+    .service-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+    
+    .service-card .icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(34, 197, 94, 0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--spacing-md);
+      font-size: 1.5rem;
+    }
+    
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .service-card p {
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: var(--spacing-4xl) 0;
+      background: linear-gradient(180deg, transparent, rgba(34, 197, 94, 0.05));
+    }
+    
+    .cta-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-3xl);
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    
+    .cta-card h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .cta-card p {
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    /* Footer */
+    footer {
+      padding: var(--spacing-2xl) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--spacing-2xl);
+    }
+    
+    .footer-brand p {
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+      margin-top: var(--spacing-md);
+    }
+    
+    .footer-col h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .footer-col a {
+      display: block;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      margin-bottom: var(--spacing-sm);
+      transition: color var(--transition);
+    }
+    
+    .footer-col a:hover { color: var(--color-text); }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="#22C55E"/>
+          <path d="M8 16L14 22L24 10" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        JP Automation
+      </a>
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#casos">Casos</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#contacto" class="nav-cta">Hablar con expertos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">Premium B2B Delivery · USA + LATAM</span>
+        <h1>Escala tu revenue sin escalar tu equipo con sistemas que se ejecutan solos</h1>
+        <p class="lead">Diseñamos e implementamos sistemas comerciales y operativos con IA para pymes B2B. Tu equipo gana foco, velocidad y previsibilidad sin reemplazar tu stack.</p>
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>-31%</strong>
+            <span>cuellos de botella</span>
+          </div>
+          <div class="metric">
+            <strong>+24%</strong>
+            <span>conversión comercial</span>
+          </div>
+          <div class="metric">
+            <strong>6-10 sem</strong>
+            <span>primeras métricas</span>
+          </div>
+        </div>
+      </div>
+      
+      <aside class="lead-card" id="contacto">
+        <div class="lead-card-header">
+          <span class="badge">Gratis · 45 minutos</span>
+          <h2>Diagnóstico Ejecutivo</h2>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" required placeholder="Tu empresa">
+          </div>
+          <div class="form-group">
+            <label for="email">Email laboral</label>
+            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
+          </div>
+          <div class="form-group">
+            <label for="objetivo">Objetivo principal</label>
+            <select id="objetivo" name="objetivo">
+              <option value="">Selecciona una opción</option>
+              <option value="crm">Automatizar CRM</option>
+              <option value="ventas">Aumentar conversión</option>
+              <option value="operaciones">Optimizar operaciones</option>
+              <option value="ia">Implementar IA</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Obtener mi roadmap</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <section class="social-proof">
+    <div class="container">
+      <p>Empresas que confían en nosotros</p>
+      <div class="logos">
+        <span>Company A</span>
+        <span>Company B</span>
+        <span>Company C</span>
+        <span>Company D</span>
+        <span>Company E</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sistemas que generan revenue</h2>
+        <p>No entregamos promesas vagas. Entregamos infraestructura operativa que produce resultados medibles.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon">⚡</div>
+          <h3>CRM + Automations</h3>
+          <p>Automatizaciones que mueves leads, cierran deals y rescatan oportunidades perdidas. Sin intervention manual.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">📈</div>
+          <h3>Revenue Ops</h3>
+          <p>Sistemas comerciales medibles con métricas claras: conversión, ciclo de venta, ticket promedio.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🤖</div>
+          <h3>AI Implementation</h3>
+          <p>IA aplicada a tus casos de uso: qualification, follow-up, contenido, análisis de conversaciones.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Listo para escalar?</h2>
+        <p>45 minutos para entender tu situación y darte un roadmap con prioridades y ROI estimado.</p>
+        <a href="#contacto" class="btn btn-primary">Agendar diagnóstico</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span style="font-weight:700;font-size:1.125rem;">JP Automation</span>
+          <p>Premium B2B Delivery para USA y LATAM. Revenue Systems + Ops Automation.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <a href="#">CRM + Automations</a>
+          <a href="#">Revenue Ops</a>
+          <a href="#">AI Implementation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#">Casos de éxito</a>
+          <a href="#">Metodología</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="#">Hola@jpautomation.com</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

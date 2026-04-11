@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jpautomation.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpautomation.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpautomation.com/en/index.html" />
+  </url>
+  <url>
+    <loc>https://jpautomation.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jpautomation.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://jpautomation.com/en/index.html" />
+  </url>
+  <url><loc>https://jpautomation.com/servicios.html</loc></url>
+  <url><loc>https://jpautomation.com/en/services.html</loc></url>
+  <url><loc>https://jpautomation.com/casos.html</loc></url>
+  <url><loc>https://jpautomation.com/en/cases.html</loc></url>
+  <url><loc>https://jpautomation.com/metodologia.html</loc></url>
+  <url><loc>https://jpautomation.com/en/methodology.html</loc></url>
+  <url><loc>https://jpautomation.com/recursos.html</loc></url>
+  <url><loc>https://jpautomation.com/en/resources.html</loc></url>
+  <url><loc>https://jpautomation.com/blog.html</loc></url>
+  <url><loc>https://jpautomation.com/en/blog.html</loc></url>
+  <url><loc>https://jpautomation.com/contacto.html</loc></url>
+  <url><loc>https://jpautomation.com/en/contact.html</loc></url>
+  <url><loc>https://jpautomation.com/privacidad.html</loc></url>
+  <url><loc>https://jpautomation.com/terminos.html</loc></url>
+  <url><loc>https://jpautomation.com/en/privacy.html</loc></url>
+  <url><loc>https://jpautomation.com/en/terms.html</loc></url>
+  <url><loc>https://jpautomation.com/blog/costo-no-usar-ia-pymes.html</loc></url>
+  <url><loc>https://jpautomation.com/en/blog/cost-of-not-using-ai-smbs.html</loc></url>
+  <url><loc>https://jpautomation.com/blog/procesos-automatizables-pymes.html</loc></url>
+  <url><loc>https://jpautomation.com/en/blog/automatable-processes-smbs.html</loc></url>
+  <url><loc>https://jpautomation.com/blog/ia-ventas-operaciones-pymes.html</loc></url>
+  <url><loc>https://jpautomation.com/en/blog/ai-sales-operations-smbs.html</loc></url>
+</urlset>
