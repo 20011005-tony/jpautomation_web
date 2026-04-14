@@ -24,3 +24,6 @@ dist/
 
 # Git internals (should never be committed inside a repo)
 .git/
+
+# Local Netlify folder
+.netlify

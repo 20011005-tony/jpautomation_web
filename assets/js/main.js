@@ -1,3 +1,21 @@
+// Inject mobile-nav styles (pages use Tailwind CDN, not styles.css)
+const mobileNavStyles = document.createElement('style');
+mobileNavStyles.textContent = `
+.mobile-nav{display:none;flex-direction:column;gap:0;padding:0 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,.05);background:rgba(9,9,11,.97);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{display:block;padding:.85rem 0;font-size:1rem;font-weight:600;color:#a1a1aa;border-bottom:1px solid rgba(255,255,255,.04);transition:color .2s}
+.mobile-nav a:hover,.mobile-nav a.active-link{color:#cc97ff}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav .mobile-lang{display:flex;align-items:center;gap:.5rem;padding-top:1rem;margin-top:.5rem;border-top:1px solid rgba(255,255,255,.08);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.mobile-nav .mobile-lang a{display:inline;padding:0;border-bottom:none;font-size:.75rem}
+.mobile-nav .mobile-lang span{color:#52525b}
+.hamburger-line{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+[data-menu-btn][aria-expanded="true"] .hamburger-line:nth-child(1){transform:translateY(8px) rotate(45deg)}
+[data-menu-btn][aria-expanded="true"] .hamburger-line:nth-child(2){opacity:0}
+[data-menu-btn][aria-expanded="true"] .hamburger-line:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+`;
+document.head.appendChild(mobileNavStyles);
+
 (() => {
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
   const uiText = isEnglish

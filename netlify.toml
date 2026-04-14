@@ -111,6 +111,9 @@
   status = 404
   force = true
 
+# NOTE: Netlify Forms se procesan automáticamente sin redirects
+# No necesitamos redirect especiales - el form POST es captado por Netlify
+
 [[redirects]]
   from = "/"
   to = "/index.html"
