@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bot Integration | JP Automation</title>
+    <meta name="description" content="Testing the publishing system"/>
+    <link rel="canonical" href="https://comfy-zabaione-3dc4af.netlify.app/blog/test-bot-integration.html"/>
+    <link rel="alternate" hreflang="es" href="https://comfy-zabaione-3dc4af.netlify.app/blog/test-bot-integration.html"/>
+    <link rel="alternate" hreflang="en" href="https://comfy-zabaione-3dc4af.netlify.app/en/blog/test-bot-integration.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://comfy-zabaione-3dc4af.netlify.app/blog/test-bot-integration.html"/>
+    
+    <!-- Tailwind + Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#CC97FF', 'primary-dim': '#9B4DCA', secondary: '#67E8F9', surface: '#0E0E0E',
+                    'surface-container': '#1A1A1A', 'surface-container-low': '#141414',
+                    'surface-container-high': '#262626', 'surface-container-highest': '#333333',
+                    onSurface: '#EDEDED', 'on-surface-variant': '#A1A1A', outline: '#404040'
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"/>
+    <style>body { font-family: 'Manrope', sans-serif; } .font-headline, h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }</style>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/logo-jp-automation.svg"/>
+</head>
+<body class="bg-background text-on-surface antialiased">
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-outline/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../assets/img/logo-jp-automation.svg" alt="JP Automation" class="h-8"/>
+                <span class="font-headline font-bold text-xl">JP Automation</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../servicios.html" class="text-on-surface-variant hover:text-primary transition-colors">Servicios</a>
+                <a href="../casos.html" class="text-on-surface-variant hover:text-primary transition-colors">Casos</a>
+                <a href="../metodologia.html" class="text-on-surface-variant hover:text-primary transition-colors">Metodología</a>
+                <a href="../recursos.html" class="text-on-surface-variant hover:text-primary transition-colors">Recursos</a>
+                <a href="../blog.html" class="text-primary font-medium">Blog</a>
+                <a href="../contacto.html" class="px-6 py-2 bg-primary text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(204,151,255,0.4)] transition-all">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <main class="pt-32 pb-20">
+        <article class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest rounded-full">AUTOMATIZACIÓN</span>
+                    <span class="text-outline text-sm">11 de April, 2026</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold font-headline text-white mb-6">Test Bot Integration</h1>
+                <p class="text-xl text-on-surface-variant leading-relaxed">Testing the publishing system</p>
+            </header>
+            
+            <!-- Content -->
+            <div class="prose prose-lg max-w-none">
+                <p class='text-on-surface-variant leading-relaxed mb-6'>Blog de prueba integrado con el bot.</p>
+
+            </div>
+            
+            <!-- CTA -->
+            <div class="mt-16 p-8 bg-surface-container rounded-2xl border border-primary/20">
+                <h3 class="text-2xl font-bold text-white mb-4">¿Listo para implementar esto en tu empresa?</h3>
+                <p class="text-on-surface-variant mb-6">Agenda una llamada de diagnóstico de 45 minutos y evaluamos tu caso.</p>
+                <a href="../contacto.html" class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(204,151,255,0.5)] transition-all">
+                    Agendar Diagnóstico
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-outline/10 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <img src="../assets/img/logo-jp-automation.svg" alt="JP Automation" class="h-10 mb-4"/>
+                    <p class="text-on-surface-variant">Automatización e IA para pymes B2B en USA y LATAM.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-on-surface-variant">
+                        <li><a href="../servicios.html">CRM Automatization</a></li>
+                        <li><a href="../servicios.html">Revenue Ops</a></li>
+                        <li><a href="../servicios.html">AI Implementation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-on-surface-variant">
+                        <li><a href="../metodologia.html">Metodología</a></li>
+                        <li><a href="../casos.html">Casos de Éxito</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-on-surface-variant">
+                        <li><a href="../privacidad.html">Privacidad</a></li>
+                        <li><a href="../terminos.html">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-outline/10 mt-12 pt-8 text-center text-zinc-500">
+                © 2026 JP Automation. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

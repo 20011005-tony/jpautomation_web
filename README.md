@@ -69,7 +69,7 @@ jpautomation_web/
 
 ## Nota de despliegue
 
-El sitio usa canonicals y URLs absolutas de ejemplo bajo `https://jpautomation.com/`.
+El sitio usa canonicals y URLs absolutas de ejemplo bajo `https://comfy-zabaione-3dc4af.netlify.app/`.
 Si se publica en otro dominio, conviene actualizar:
 
 - canonicals en cada HTML,
