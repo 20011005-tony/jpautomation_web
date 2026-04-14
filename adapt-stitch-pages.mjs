@@ -308,49 +308,49 @@ const pagesDef = [
     enTitle: 'JP Automation | Automation & AI for B2B SMBs',
     desc: 'Diseñamos sistemas comerciales y operativos con automatización e IA para dueños y operadores de pymes en USA y LATAM.',
     enDesc: 'We design commercial and operations systems with automation and AI for SMB owners in the US and LATAM.',
-    canonical: 'https://jpautomation.com/', enCanonical: 'https://jpautomation.com/en/index.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/index.html',
     activeEs: 'Inicio', activeEn: 'Home',
     replacements: INDEX_REPLACEMENTS },
   { raw: 'raw-servicios.html', out: 'servicios.html', enOut: 'en/services.html',
     title: 'Servicios | JP Automation', enTitle: 'Services | JP Automation',
     desc: 'CRM, Revenue Ops, automatización e IA para pymes B2B en USA y LATAM.',
     enDesc: 'CRM, Revenue Ops, automation and AI for B2B SMBs in the US and LATAM.',
-    canonical: 'https://jpautomation.com/servicios.html', enCanonical: 'https://jpautomation.com/en/services.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/servicios.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/services.html',
     activeEs: 'Servicios', activeEn: 'Services',
     replacements: SERVICIOS_REPLACEMENTS },
   { raw: 'raw-casos.html', out: 'casos.html', enOut: 'en/cases.html',
     title: 'Casos de Éxito | JP Automation', enTitle: 'Case Studies | JP Automation',
     desc: 'Resultados reales en equipos B2B que necesitaban escalar sin perder control operativo.',
     enDesc: 'Real results from B2B teams that needed to scale without losing operational control.',
-    canonical: 'https://jpautomation.com/casos.html', enCanonical: 'https://jpautomation.com/en/cases.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/casos.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/cases.html',
     activeEs: 'Casos', activeEn: 'Cases',
     replacements: CASOS_REPLACEMENTS },
   { raw: 'raw-metodologia.html', out: 'metodologia.html', enOut: 'en/methodology.html',
     title: 'Metodología | JP Automation', enTitle: 'Methodology | JP Automation',
     desc: 'Discovery corto, priorización dura y sprints de ejecución para pymes B2B.',
     enDesc: 'Short discovery, strict prioritization and execution sprints for B2B SMBs.',
-    canonical: 'https://jpautomation.com/metodologia.html', enCanonical: 'https://jpautomation.com/en/methodology.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/metodologia.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/methodology.html',
     activeEs: 'Metodología', activeEn: 'Methodology',
     replacements: METODOLOGIA_REPLACEMENTS },
   { raw: 'raw-contacto.html', out: 'contacto.html', enOut: 'en/contact.html',
     title: 'Contacto | JP Automation', enTitle: 'Contact | JP Automation',
     desc: 'Agendá tu diagnóstico de 45 minutos con ROI claro.',
     enDesc: 'Book your 45-minute assessment with clear ROI.',
-    canonical: 'https://jpautomation.com/contacto.html', enCanonical: 'https://jpautomation.com/en/contact.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/contacto.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/contact.html',
     activeEs: 'Contacto', activeEn: 'Contact',
     replacements: CONTACTO_REPLACEMENTS },
   { raw: 'raw-blog.html', out: 'blog.html', enOut: 'en/blog.html',
     title: 'Blog | JP Automation', enTitle: 'Blog | JP Automation',
     desc: 'Artículos sobre automatización, IA y operaciones para pymes B2B.',
     enDesc: 'Articles on automation, AI and operations for B2B SMBs.',
-    canonical: 'https://jpautomation.com/blog.html', enCanonical: 'https://jpautomation.com/en/blog.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/blog.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/blog.html',
     activeEs: 'Blog', activeEn: 'Blog',
     replacements: BLOG_REPLACEMENTS },
   { raw: 'raw-recursos.html', out: 'recursos.html', enOut: 'en/resources.html',
     title: 'Recursos | JP Automation', enTitle: 'Resources | JP Automation',
     desc: 'Guías, plantillas y herramientas para automatizar tu pyme B2B.',
     enDesc: 'Guides, templates and tools to automate your B2B SMB.',
-    canonical: 'https://jpautomation.com/recursos.html', enCanonical: 'https://jpautomation.com/en/resources.html',
+    canonical: 'https://comfy-zabaione-3dc4af.netlify.app/recursos.html', enCanonical: 'https://comfy-zabaione-3dc4af.netlify.app/en/resources.html',
     activeEs: 'Recursos', activeEn: 'Resources',
     replacements: RECURSOS_REPLACEMENTS },
 ];
@@ -466,8 +466,8 @@ function buildHead(page, isEn) {
   const t = isEn ? page.enTitle : page.title;
   const d = isEn ? page.enDesc : page.desc;
   const c = isEn ? page.enCanonical : page.canonical;
-  const esUrl = `https://jpautomation.com/${page.out}`;
-  const enUrl = `https://jpautomation.com/${page.enOut}`;
+  const esUrl = `https://comfy-zabaione-3dc4af.netlify.app/${page.out}`;
+  const enUrl = `https://comfy-zabaione-3dc4af.netlify.app/${page.enOut}`;
   return `<!DOCTYPE html>
 <html class="dark" lang="${isEn ? 'en' : 'es'}">
 <head>
@@ -483,7 +483,7 @@ function buildHead(page, isEn) {
 <meta property="og:title" content="${t}"/>
 <meta property="og:description" content="${d}"/>
 <meta property="og:url" content="${c}"/>
-<meta property="og:image" content="https://jpautomation.com/assets/img/og-image.svg"/>
+<meta property="og:image" content="https://comfy-zabaione-3dc4af.netlify.app/assets/img/og-image.svg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="${t}"/>
 <meta name="twitter:description" content="${d}"/>`;
