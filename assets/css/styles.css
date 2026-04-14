@@ -911,6 +911,9 @@ a:focus-visible,
   .footer-grid { grid-template-columns: 1fr; }
   .hero-proof,
   .trusted-row { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid { grid-template-columns: repeat(6, 1fr); }
+  .bento-col-8 { grid-column: span 6; }
+  .bento-col-4 { grid-column: span 3; }
 }
 
 @media (max-width: 768px) {
@@ -949,6 +952,51 @@ a:focus-visible,
   }
   .hero-proof,
   .trusted-row { grid-template-columns: 1fr; }
+  .split,
+  .cards { grid-template-columns: 1fr; gap: 1rem; }
+  .stats,
+  .process-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-grid > div:first-child { grid-column: span 2; }
+  h1 { font-size: clamp(2rem, 6vw, 3rem); }
+  h2 { font-size: clamp(1.4rem, 4vw, 2rem); }
+  .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .bento-item { padding: 1.5rem; }
+  .hero { padding: 2rem 0; text-align: center; }
+  .hero-split { grid-template-columns: 1fr; padding-top: 2rem; }
+  .hero-split-section { padding: 2rem 0; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary { width: 100%; text-align: center; }
+  .section { padding: 2rem 0; }
+  .post-layout { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .cta-band { padding: 1.5rem; text-align: center; }
+  .hero-proof { gap: 0.6rem; }
+  .hero-proof div { padding: 0.75rem; }
+  .hero-proof strong { font-size: 1.1rem; }
+  .container { width: 92%; }
+}
+
+@media (max-width: 480px) {
+  .stats,
+  .process-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > div:first-child { grid-column: span 1; }
+  .hero-sub { font-size: 1rem; }
+  .badge-row { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+  h2 { font-size: clamp(1.2rem, 4vw, 1.6rem); }
+  h3 { font-size: clamp(1rem, 3vw, 1.3rem); }
+  p, li { font-size: 0.95rem; }
+  .btn, button, input[type="submit"] { padding: 0.75rem 1.2rem; font-size: 0.9rem; }
+  .hero .btn-primary,
+  .hero .btn-secondary { padding: 0.85rem 1.5rem; font-size: 0.95rem; }
+  .card, .panel { padding: 1rem; }
+  .bento-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+  .eyebrow { padding: 0.25rem 0.65rem; font-size: 0.65rem; }
+  .tag { padding: 0.2rem 0.55rem; font-size: 0.6rem; }
 }
 
 /* ===== MOBILE NAV MENU ===== */
@@ -961,6 +1009,7 @@ a:focus-visible,
   background: rgba(9, 9, 11, 0.97);
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
+  z-index: 101;
 }
 .mobile-nav.open {
   display: flex;

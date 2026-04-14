@@ -29,9 +29,9 @@
     <style>
 /* ===== CRITICAL NAV — zero Tailwind dependency ===== */
 nav{position:fixed!important;top:0!important;width:100%!important;z-index:50!important;background:rgba(9,9,11,.85)!important;-webkit-backdrop-filter:blur(20px)!important;backdrop-filter:blur(20px)!important;box-shadow:0 0 20px rgba(168,85,247,.15)!important}
-nav>div{display:flex!important;align-items:center!important;justify-content:space-between!important;max-width:80rem!important;margin:0 auto!important;height:5rem!important;padding-left:1.5rem!important;padding-right:1.5rem!important}
+nav>div{display:flex!important;align-items:center!important;justify-content:space-between!important;max-width:80rem!important;margin:0 auto!important;min-height:5rem!important;height:auto!important;padding-left:1.5rem!important;padding-right:1.5rem!important}
 @media(min-width:1024px){nav>div>div[class*="hidden"]{display:flex!important}[data-menu-btn]{display:none!important}.mobile-nav{display:none!important}}
-.mobile-nav{display:none!important;flex-direction:column;padding:0 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,.05);background:rgba(9,9,11,.97);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.mobile-nav{display:none!important;position:relative;z-index:100;flex-direction:column;padding:0 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,.05);background:rgba(14,14,14,.98)!important;-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
 .mobile-nav.open{display:flex!important}
 .mobile-nav a{display:block;padding:.85rem 0;font-size:1rem;font-weight:600;color:#a1a1aa;border-bottom:1px solid rgba(255,255,255,.04);text-decoration:none;transition:color .2s}
 .mobile-nav a:hover,.mobile-nav a.active-link{color:#cc97ff}

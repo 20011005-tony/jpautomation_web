@@ -11,7 +11,7 @@ nav>div{display:flex;align-items:center;justify-content:space-between;height:5re
 /* Mobile nav panel: hidden on desktop */
 @media(min-width:1024px){.mobile-nav{display:none!important}}
 /* ===== MOBILE NAV ===== */
-.mobile-nav{display:none;flex-direction:column;gap:0;padding:0 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,.05);background:rgba(9,9,11,.97);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.mobile-nav{display:none!important;position:relative;z-index:100;flex-direction:column;gap:0;padding:0 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,.05);background:rgba(14,14,14,.98)!important;-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
 .mobile-nav.open{display:flex!important}
 .mobile-nav a{display:block;padding:.85rem 0;font-size:1rem;font-weight:600;color:#a1a1aa;border-bottom:1px solid rgba(255,255,255,.04);transition:color .2s}
 .mobile-nav a:hover,.mobile-nav a.active-link{color:#cc97ff}
